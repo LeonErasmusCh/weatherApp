@@ -53,10 +53,10 @@ function App() {
           </div>
           {(typeof weather.main !== "undefined") ? (
             <>
-              <div className='container col-10 col-md-6  center-info'>
+              <div className='container col-10 col-md-6 mb-5 center-info'>
                 <div className='row'>
                   <div className='m-auto'>
-                    <h4 className='date text-muted'>{dateBuilder(new Date())}</h4>
+                    <h4 className='date text-muted mt-5'>{dateBuilder(new Date())}</h4>
                     <h5>{weather.name} , {weather.sys.country}</h5>
                     <h4>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
                     <h5 className='weather mt-3'>{weather.weather[0].main}</h5>
@@ -70,6 +70,7 @@ function App() {
                 </div>
               </div>
 
+{/* 
               <div className='container-fluid'>
                 <div className='row bottom-placement'>
                   <div class="card-group">
@@ -140,14 +141,16 @@ function App() {
                 </div>
 
               </div>
+*/}
+
             </>
 
 
           ) : (
-            <div className='container col-10 col-md-6  center-info'>
+            <div className='container col-10 col-md-6 welcome'>
               <div className='row'>
                 <div className='m-auto'>
-                  <h4 className='date text-muted'>Welcome to WeatherApp</h4>
+                  <h4 className='date text-muted display-4'>Welcome to WeatherApp</h4>
                 </div>
               </div>
             </div>
