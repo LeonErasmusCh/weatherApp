@@ -11,6 +11,8 @@ body {
     box-shadow: rgba(0, 0, 0, 0.28) 0px 25px 50px -12px;
     outline: none;
     padding:20px;
+
+    -webkit-appearance: none;
 }
 
 .welcome{
