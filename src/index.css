@@ -1,6 +1,18 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
+  /*
+
+  background-image: url(/public/warmDay.jpg);
+
+  height: 100%;
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-attachment: fixed;
+
+  */
 }
 
  input{
@@ -11,7 +23,14 @@ body {
     box-shadow: rgba(50, 50, 93, 0.2) 0px 13px 27px -5px, rgba(0, 0, 0, 0.2) 0px 8px 16px -8px;     
     padding: 15px;
     -webkit-appearance: none;
+
+    background-color: rgba(255, 255, 255, .15);  
+   backdrop-filter: blur(10px);
   }
+
+  input[type="text"]::placeholder {  
+    text-align: center; 
+} 
 
 
 .welcome{
@@ -25,19 +44,77 @@ body {
 
 }
 
-
  .warm{
-   /*
-  background-image: linear-gradient(to right top, #e7734a, #f09870, #f7ba99, #fcdbc8, #fffcfa);  height: 100vh
-*/
+  background-image: url(/public/warmDay.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
+  height: 100vh;
  }
 
 
- .cold{
-   /*
-  background-image: linear-gradient(to right top, #378ebe, #70a7ce, #9dc0df, #c6dbef, #eef6ff);  
+ .cloudy{
+  background-image: url(/public/cloudy.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
   height: 100vh;
-  */
+}
+
+ .cold{
+  background-image: url(/public/snow.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
+  height: 100vh;
+}
+
+.rain{
+  background-image: url(/public/rain.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
+  height: 100vh;
+}
+
+.snow{
+  background-image: url(/public/snowDay.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
+  height: 100vh;
+}
+
+.mist{
+  background-image: url(/public/misty.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
+  height: 100vh;
 }
 
 
@@ -52,12 +129,15 @@ body {
   padding: 25px;
   background-color: #F2F2F2;  
   border-radius: 20px;
+
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(16px);
 }
 
 .center-info h5{
   font-weight: bold;
   font-size: 6vw;
-  font-style: italic;
+
 
   color: #3b444b;
 }
@@ -65,7 +145,7 @@ body {
 .center-info h4{
   font-weight: 800;
   font-size: 12vw;
-  font-style: italic;
+
   line-height: 0.8em;
 
   color: #354141;
@@ -74,13 +154,15 @@ body {
  .center-info .date {
   font-size: 1em;
   font-style: normal;
-  font-style: initial;
+
   font-weight: 400;
 }
 
 .icon{
   font-size: 30vh;
   opacity: 0.7;
+
+  text-shadow: 10px 10px 10px rgb(148, 147, 147);
 }
 
 .card-color{
@@ -100,7 +182,6 @@ body {
     .center-info h5{
       font-weight: bold;
       font-size: 3vw;
-      font-style: italic;
     
       color: #3b444b;
     }
@@ -108,7 +189,6 @@ body {
     .center-info h4{
       font-weight: 800;
       font-size: 8vw;
-      font-style: italic;
       line-height: 0.8em;
     
       color: #354141;

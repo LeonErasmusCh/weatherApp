@@ -36,7 +36,15 @@ function App() {
   }
 
   return (
-    <div className={(typeof weather.main !== "undefined") ? ((weather.main.temp > 19) ? "warm" : "cold") : "app"}>
+    <div className={(typeof weather.main !== "undefined") ? 
+    ((weather.weather[0].main === "Clouds") ? "cloudy" 
+    : (weather.weather[0].main === "Clear") ? "warm" 
+    : (weather.weather[0].main === "Rain") ? "rain" 
+    : (weather.weather[0].main === "Snow") ? "snow" 
+    : (weather.weather[0].main === "Mist") ? "misty" 
+    : "") 
+    
+    : "app"}>
       <div className="App">
         <main >
 
@@ -56,13 +64,13 @@ function App() {
               <div className='container col-10 col-md-6 mb-5 center-info'>
                 <div className='row'>
                   <div className='m-auto'>
-                    <h4 className='date text-muted'>{dateBuilder(new Date())}</h4>
+                    <h4 className='date'>{dateBuilder(new Date())}</h4>
                     <h5>{weather.name} , {weather.sys.country}</h5>
                     <h5 className='weather mt-3'>{weather.weather[0].main}</h5>
                     {(weather.weather[0].main === "Clear") ? <i class="fas fa-sun icon" style={{"color":"#F0BC68"}}></i> : ("")}
-                    {(weather.weather[0].main === "Clouds") ? <i class="fas fa-cloud icon" style={{"color":"#8596A6"}}></i> : ("")}
+                    {(weather.weather[0].main === "Clouds") ? <i class="fas fa-cloud icon" style={{"color":"#F2F2F2"}}></i> : ("")}
                     {(weather.weather[0].main === "Snow") ? <i class="fas fa-snowflake icon" style={{"color":"#FFF"}}></i> : ("")}
-                    {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain icon" style={{"color":"#B8C6D9"}}></i> : ("")}
+                    {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain icon " style={{"color":"#B8C6D9"}}></i> : ("")}
                     {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog icon" style={{"color":"#F2F2F2"}}></i> : ("")}
                     <h4 className='mt-2'>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
 
@@ -150,7 +158,7 @@ function App() {
             <div className='container col-10 col-md-6 welcome'>
               <div className='row'>
                 <div className='m-auto'>
-                  <h4 className='date display-4'>Welcome to WeatherApp</h4>
+                  <h4 className=' display-4'>Welcome to WeatherApp</h4>
                 </div>
               </div>
             </div>
