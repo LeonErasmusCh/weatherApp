@@ -58,13 +58,13 @@ function App() {
                   <div className='m-auto'>
                     <h4 className='date text-muted'>{dateBuilder(new Date())}</h4>
                     <h5>{weather.name} , {weather.sys.country}</h5>
-                    <h4>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
                     <h5 className='weather mt-3'>{weather.weather[0].main}</h5>
-                    {(weather.weather[0].main === "Clear") ? <i class="fas fa-sun icon"></i> : ("")}
-                    {(weather.weather[0].main === "Clouds") ? <i class="fas fa-cloud icon"></i> : ("")}
-                    {(weather.weather[0].main === "Snow") ? <i class="fas fa-snowflake icon"></i> : ("")}
-                    {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain icon"></i> : ("")}
-                    {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog icon"></i> : ("")}
+                    {(weather.weather[0].main === "Clear") ? <i class="fas fa-sun icon" style={{"color":"#F0BC68"}}></i> : ("")}
+                    {(weather.weather[0].main === "Clouds") ? <i class="fas fa-cloud icon" style={{"color":"#8596A6"}}></i> : ("")}
+                    {(weather.weather[0].main === "Snow") ? <i class="fas fa-snowflake icon" style={{"color":"#FFF"}}></i> : ("")}
+                    {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain icon" style={{"color":"#B8C6D9"}}></i> : ("")}
+                    {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog icon" style={{"color":"#F2F2F2"}}></i> : ("")}
+                    <h4>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
 
                   </div>
                 </div>
