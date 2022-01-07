@@ -64,7 +64,7 @@ function App() {
                     {(weather.weather[0].main === "Snow") ? <i class="fas fa-snowflake icon" style={{"color":"#FFF"}}></i> : ("")}
                     {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain icon" style={{"color":"#B8C6D9"}}></i> : ("")}
                     {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog icon" style={{"color":"#F2F2F2"}}></i> : ("")}
-                    <h4>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
+                    <h4 className='mt-2'>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
 
                   </div>
                 </div>
