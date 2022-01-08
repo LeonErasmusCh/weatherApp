@@ -209,11 +209,13 @@ h5.country{
 }
 
 
+/********  MEDIA q  **********/
+
 @media screen and (width > 1200px) {
 
   .center-info{
     position: absolute;
-      top: 60%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -40%);
   
