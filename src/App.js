@@ -36,22 +36,28 @@ function App() {
   }
 
   return (
+    <div className={(typeof weather.main === "undefined") ? "defaultImg" : "" }>
+
     <div className={(typeof weather.main !== "undefined") ? 
     ((weather.weather[0].main === "Clouds") ? "cloudy" 
     : (weather.weather[0].main === "Clear") ? "warm" 
     : (weather.weather[0].main === "Rain") ? "rain" 
     : (weather.weather[0].main === "Snow") ? "cold" 
     : (weather.weather[0].main === "Mist") ? "misty" 
+    : (weather.weather[0].main === "Mist") ? "misty" 
     : "") 
     
     : "app"}>
+
+
+
       <div className="App">
         <main >
 
           <div>
             <input
               //className="form-control form-control-sm"
-              className="col-10 col-md-4 m-auto input"
+              className="col-8 m-auto input"
               type="text" placeholder="Please enter city..."
               aria-label=".form-control-sm example"
               onChange={e => setQuery(e.target.value)}
@@ -158,7 +164,7 @@ function App() {
             <div className='container col-10 col-md-6 welcome'>
               <div className='row'>
                 <div className='m-auto'>
-                  <h4 className=' display-4'>Welcome to WeatherApp</h4>
+                  <h4 className=' display-4'>Welcome to <span className='weatherWelcome'>WeatherApp</span> </h4>
                 </div>
               </div>
             </div>
@@ -167,6 +173,7 @@ function App() {
 
         </main>
       </div>
+    </div>
     </div>
   );
 }
