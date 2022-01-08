@@ -67,7 +67,7 @@ function App() {
           </div>
           {(typeof weather.main !== "undefined") ? (
             <>
-              <div className='container col-10 col-md-6 mb-5 center-info'>
+              <div className='container col-10 col-md-6  center-info'>
                 <div className='row'>
                   <div className='m-auto'>
                     <h5 className='country'>{weather.name} , {weather.sys.country}</h5>
