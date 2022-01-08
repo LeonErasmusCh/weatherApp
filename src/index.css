@@ -191,7 +191,7 @@ h5.country{
 }
 
 .icon{
-  font-size: 18vh;
+  font-size: 15vw;
   opacity: 0.7;
 
   text-shadow: 10px 10px 10px rgb(104, 103, 103);
@@ -253,7 +253,7 @@ h5.country{
   
   .center-info .temperature{
     font-weight: 600;
-    font-size: 5vw;
+    font-size: 8vw;
   }
   
 
