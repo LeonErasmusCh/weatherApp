@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Loading from './components/Loading';
 
 const api = {
   key: "8d0c68f01e14bee020d473eb3ab58157",
@@ -10,6 +11,13 @@ function App() {
 
   const [query, setQuery] = useState("")
   const [weather, setWeather] = useState({})
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   const search = (evt) => {
     if (evt.key === "Enter") {
@@ -36,7 +44,9 @@ function App() {
   }
 
   return (
-    <div className={(typeof weather.main === "undefined") ? "defaultImg" : "" }>
+    
+    <div className={(typeof weather.main === "undefined" && loading === false) ? "defaultImg" : "" }>
+    {loading && <Loading />}
 
     <div className={(typeof weather.main !== "undefined") ? 
     ((weather.weather[0].main === "Clouds") ? "cloudy" 
@@ -164,7 +174,8 @@ function App() {
             <div className='container col-10 col-md-6 welcome'>
               <div className='row'>
                 <div className='m-auto'>
-                  <h4 className=' display-4'>Welcome to <span className='weatherWelcome'>WeatherApp</span> </h4>
+                  {(loading === true) ? <Loading /> 
+                  :  <h4 className=' display-4'>Welcome to <span className='weatherWelcome'>WeatherApp</span> </h4>}
                 </div>
               </div>
             </div>
@@ -175,7 +186,10 @@ function App() {
       </div>
     </div>
     </div>
+    
   );
 }
+
+
 
 export default App;

@@ -38,6 +38,22 @@ body {
   opacity: 1; /* Firefox */
 }
 
+.loading{
+  background-color: none;
+
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 100; 
+
+  /********  FLASHING TEXT    *********/
+
+  animation: blinkingText 2s infinite;
+
+}
+
+
 
 .welcome{
   color: #3b444b;
