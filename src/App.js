@@ -46,7 +46,6 @@ function App() {
   return (
     
     <div className={(typeof weather.main === "undefined" && loading === false) ? "defaultImg" : "" }>
-    {loading && <Loading />}
 
     <div className={(typeof weather.main !== "undefined") ? 
     ((weather.weather[0].main === "Clouds") ? "cloudy" 
