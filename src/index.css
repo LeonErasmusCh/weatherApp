@@ -33,6 +33,11 @@ body {
     text-align: center; 
 } 
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #3b444b;
+  opacity: 1; /* Firefox */
+}
+
 
 .welcome{
   color: #3b444b;
@@ -143,12 +148,12 @@ body {
 
 
 .center-info{
-  margin-top: 3%;
+  margin-top: 2%;
 
   position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -40%);
 
   padding: 25px;
   background-color: #F2F2F2;  
@@ -210,7 +215,7 @@ h5.country{
 
   .center-info .country{
     font-weight: 300;
-    font-size: 5vw;
+    font-size: 4vw;
   
     line-height: 0.8em;
   
@@ -225,12 +230,12 @@ h5.country{
   
   .center-info .weather{
     font-weight: 400;
-    font-size: 6vw;
+    font-size: 5vw;
   }
   
   .center-info .temperature{
     font-weight: 600;
-    font-size: 6vw;
+    font-size: 5vw;
   }
   
   .icon{
