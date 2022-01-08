@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
+  font-family: 'Be Vietnam Pro', sans-serif;
   /*
 
   background-image: url(/public/warmDay.jpg);
@@ -45,7 +46,7 @@ body {
 }
 
  .warm{
-  background-image: url(/public/warmDay.jpg);
+  background-image: url(/public/blueSky.jpg);
 
   background-position: center center ;
   background-repeat: no-repeat;
@@ -134,35 +135,40 @@ body {
   backdrop-filter: blur(16px);
 }
 
-.center-info h5{
-  font-weight: bold;
-  font-size: 6vw;
 
 
-  color: #3b444b;
-}
-
-.center-info h4{
-  font-weight: 800;
-  font-size: 12vw;
+h5.country{
+  
+  font-weight: 300;
+  font-size: 9vw;
 
   line-height: 0.8em;
 
   color: #354141;
+  
 }
 
  .center-info .date {
-  font-size: 1em;
+  font-size: 2vw;
   font-style: normal;
+  font-weight: 100;
+}
 
+.center-info .weather{
   font-weight: 400;
+  font-size: 10vw;
+}
+
+.center-info .temperature{
+  font-weight: 600;
+  font-size: 10vw;
 }
 
 .icon{
-  font-size: 30vh;
+  font-size: 26vh;
   opacity: 0.7;
 
-  text-shadow: 10px 10px 10px rgb(148, 147, 147);
+  text-shadow: 10px 10px 10px rgb(104, 103, 103);
 }
 
 .card-color{
@@ -177,33 +183,38 @@ body {
 }
 
 
-@media screen and (width > 1000px) {
+@media screen and (width > 300px) {
 
-    .center-info h5{
-      font-weight: bold;
-      font-size: 3vw;
-    
-      color: #3b444b;
-    }
-    
-    .center-info h4{
-      font-weight: 800;
-      font-size: 8vw;
-      line-height: 0.8em;
-    
-      color: #354141;
-    }
-    
-     .center-info .date {
-      font-size: 1em;
-      font-style: normal;
-      font-style: initial;
-      font-weight: 400;
-    }
-    
-    .icon{
-      font-size: 30vh;
-      opacity: 0.7;
-    }
+  .center-info .country{
+    font-weight: 300;
+    font-size: 5vw;
+  
+    line-height: 0.8em;
+  
+    color: #354141;
+  }
+  
+   .center-info .date {
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 100;
+  }
+  
+  .center-info .weather{
+    font-weight: 400;
+    font-size: 6vw;
+  }
+  
+  .center-info .temperature{
+    font-weight: 600;
+    font-size: 6vw;
+  }
+  
+  .icon{
+    font-size: 30vh;
+    opacity: 0.7;
+  
+    text-shadow: 10px 10px 10px rgb(104, 103, 103);
+  }
 
 }
