@@ -39,7 +39,7 @@ body {
 }
 
 .loading{
-  background-color: none;
+  color:#3b444b;
 
   position: absolute;
   top: 40%;
@@ -48,9 +48,13 @@ body {
   font-weight: 100; 
 
   /********  FLASHING TEXT    *********/
+  animation: blinker 1s linear infinite;
+}
 
-  animation: blinkingText 2s infinite;
-
+@keyframes blinker {
+  80% {
+    opacity: 0;
+  }
 }
 
 
@@ -182,7 +186,7 @@ body {
 h5.country{
   
   font-weight: 300;
-  font-size: 9vw;
+  font-size: 8vw;
 
   line-height: 0.8em;
 
@@ -198,12 +202,12 @@ h5.country{
 
 .center-info .weather{
   font-weight: 400;
-  font-size: 10vw;
+  font-size: 9vw;
 }
 
 .center-info .temperature{
   font-weight: 600;
-  font-size: 10vw;
+  font-size: 9vw;
 }
 
 .icon{
@@ -244,12 +248,13 @@ h5.country{
   }
 }
 
-@media screen and (width > 300px) {
 
+
+@media screen and (width > 300px) {
 
   .center-info .country{
     font-weight: 300;
-    font-size: 5vw;
+    font-size: 4vw;
   
     line-height: 0.8em;
   
@@ -269,7 +274,11 @@ h5.country{
   
   .center-info .temperature{
     font-weight: 600;
-    font-size: 8vw;
+    font-size: 6vw;
+  }
+
+  .icon{
+    font-size: 13vw;
   }
   
 

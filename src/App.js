@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 3500);
   }, []);
 
   const search = (evt) => {
@@ -82,11 +82,11 @@ function App() {
                     <h5 className='country'>{weather.name} , {weather.sys.country}</h5>
                     <h4 className='date mb-4'>{dateBuilder(new Date())}</h4>
                     <h5 className='weather mt-4'>{weather.weather[0].main}</h5>
-                    {(weather.weather[0].main === "Clear") ? <i class="fas fa-sun mt-4 icon" style={{"color":"#F0BC68"}}></i> : ("")}
-                    {(weather.weather[0].main === "Clouds") ? <i class="fas fa-cloud mt-4 icon" style={{"color":"#F2F2F2"}}></i> : ("")}
-                    {(weather.weather[0].main === "Snow") ? <i class="fas fa-snowflake mt-4 icon" style={{"color":"#FFF"}}></i> : ("")}
-                    {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain mt-4 icon " style={{"color":"#B8C6D9"}}></i> : ("")}
-                    {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog mt-4 icon" style={{"color":"#F2F2F2"}}></i> : ("")}
+                    {(weather.weather[0].main === "Clear") ? <i class="fas fa-sun mt-2 icon" style={{"color":"#F0BC68"}}></i> : ("")}
+                    {(weather.weather[0].main === "Clouds") ? <i class="fas fa-cloud mt-2 icon" style={{"color":"#F2F2F2"}}></i> : ("")}
+                    {(weather.weather[0].main === "Snow") ? <i class="fas fa-snowflake mt-2 icon" style={{"color":"#FFF"}}></i> : ("")}
+                    {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain mt-2 icon " style={{"color":"#B8C6D9"}}></i> : ("")}
+                    {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog mt-2 icon" style={{"color":"#F2F2F2"}}></i> : ("")}
                     <h4 className='temperature mt-4'>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
 
                   </div>
