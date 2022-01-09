@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   const search = (evt) => {
-    if (evt.key === "Enter") {
+    if (evt.charCode === 13) {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
@@ -94,10 +94,10 @@ function App() {
                     
                     
                     <div className='row'>
-                      <p className='col-3 bottom-info'></p>
-                      <p className='col-3 bottom-info'>min {Math.round(weather.main.temp_min)} <span style={{ "fontSize": "0.7em" }}>°</span>c</p>
-                      <p className='col-3 bottom-info'>max {Math.round(weather.main.temp_max)} <span style={{ "fontSize": "0.7em" }}>°</span>c</p>
-                      <p className='col-3 bottom-info'></p>
+                      <p className='col-2 bottom-info'></p>
+                      <p className='col-4 bottom-info'>min {Math.round(weather.main.temp_min)} <span style={{ "fontSize": "0.7em" }}>°</span>c</p>
+                      <p className='col-4 bottom-info'>max {Math.round(weather.main.temp_max)} <span style={{ "fontSize": "0.7em" }}>°</span>c</p>
+                      <p className='col-2 bottom-info'></p>
                     </div>
                   
 

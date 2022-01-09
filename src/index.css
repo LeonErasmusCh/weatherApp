@@ -201,7 +201,7 @@ h5.country{
 }
 
  .center-info .bottom-info {
-  font-size: 1vw;
+  font-size: 2vw;
   font-style: normal;
   font-weight: 200;
 }
@@ -213,7 +213,7 @@ h5.country{
 
 .center-info .temperature{
   font-weight: 600;
-  font-size: 9vw;
+  font-size: 8vw;
 }
 
 .icon{
@@ -288,9 +288,9 @@ h5.country{
   }
   }
 
-  @media screen and (width < 2100px) {
+  @media screen and (width < 1000px) {
     .center-info .bottom-info {
-      font-size: 2vw;
+      font-size: 3.5vw;
    }
     
   }
