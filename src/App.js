@@ -50,10 +50,10 @@ function App() {
     <div className={(typeof weather.main !== "undefined") ? 
     ((weather.weather[0].main === "Clouds") ? "cloudy" 
     : (weather.weather[0].main === "Clear") ? "warm" 
-    : (weather.weather[0].main === "Rain") ? "rain" 
+    : (weather.weather[0].main === "Rainy") ? "rain" 
     : (weather.weather[0].main === "Snow") ? "cold" 
     : (weather.weather[0].main === "Mist") ? "misty" 
-    : (weather.weather[0].main === "Mist") ? "misty" 
+    : (weather.weather[0].main === "Drizzle") ? "drizzle" 
     : "") 
     
     : "app"}>

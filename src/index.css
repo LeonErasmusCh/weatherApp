@@ -154,6 +154,18 @@ body {
   height: 100vh;
 }
 
+.drizzle{
+  background-image: url(/public/drizzle.jpg);
+
+  background-position: center center ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  background-attachment: fixed;
+  
+  height: 100vh;
+}
+
 .defaultImg{
   background-image: url(/public/defaultImg.jpg);
 
