@@ -2,18 +2,6 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   font-family: 'Be Vietnam Pro', sans-serif;
-  /*
-
-  background-image: url(/public/warmDay.jpg);
-
-  height: 100%;
-  background-position: center center ;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  background-attachment: fixed;
-
-  */
 }
 
  input{
@@ -212,6 +200,12 @@ h5.country{
   font-weight: 100;
 }
 
+ .center-info .bottom-info {
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 200;
+}
+
 .center-info .weather{
   font-weight: 400;
   font-size: 9vw;
@@ -247,7 +241,7 @@ h5.country{
 
   .center-info{
     position: absolute;
-      top: 50%;
+      top: 45%;
       left: 50%;
       transform: translate(-50%, -40%);
   
@@ -292,7 +286,11 @@ h5.country{
   .icon{
     font-size: 13vw;
   }
-  
+  }
 
-
-}
+  @media screen and (width < 2100px) {
+    .center-info .bottom-info {
+      font-size: 2vw;
+   }
+    
+  }

@@ -7,16 +7,19 @@ const api = {
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
+
 function App() {
 
   const [query, setQuery] = useState("")
   const [weather, setWeather] = useState({})
   const [loading, setLoading] = useState(true);
 
+
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3500);
+    }, 3000);
   }, []);
 
   const search = (evt) => {
@@ -88,6 +91,15 @@ function App() {
                     {(weather.weather[0].main === "Rain") ? <i class="fas fa-cloud-rain mt-2 icon " style={{"color":"#B8C6D9"}}></i> : ("")}
                     {(weather.weather[0].main === "Mist") ? <i class="fas fa-smog mt-2 icon" style={{"color":"#F2F2F2"}}></i> : ("")}
                     <h4 className='temperature mt-4'>{Math.round(weather.main.temp)}<span style={{ "fontSize": "0.7em" }}>°</span>c</h4>
+                    
+                    
+                    <div className='row'>
+                      <p className='col-3 bottom-info'></p>
+                      <p className='col-3 bottom-info'>min {Math.round(weather.main.temp_min)} <span style={{ "fontSize": "0.7em" }}>°</span>c</p>
+                      <p className='col-3 bottom-info'>max {Math.round(weather.main.temp_max)} <span style={{ "fontSize": "0.7em" }}>°</span>c</p>
+                      <p className='col-3 bottom-info'></p>
+                    </div>
+                  
 
                   </div>
                 </div>
