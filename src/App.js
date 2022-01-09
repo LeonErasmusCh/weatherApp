@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   const search = (evt) => {
-    if (evt.charCode === 13) {
+    if (evt.key === "Enter" || evt.key === "Done") {
       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
         .then(res => res.json())
         .then(result => {
